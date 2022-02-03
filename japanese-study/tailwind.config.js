@@ -3,13 +3,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#DD919F',
-        secondary: '#D46C86',
-        tertiary: '#3682C6',
+        primary: '#FA4EAB',
+        secondary: '#FE83C6',
+        tertiary: '#FFF2F9',
         error: '#F44336',
         warning: '#FF9800',
         info: '#2196F3',
         success: '#4CAF50',
+        black: '#323232',
       },
     },
   },

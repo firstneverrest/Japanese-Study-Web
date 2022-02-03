@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
@@ -7,9 +7,36 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  background: #000;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 60px !important;
+  font-weight: 700 !important;
+}
+
+.nav-width {
+  width: 80rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .nav-width {
+    width: 100%;
+  }
+}
+
+.paragraph-width {
+  width: 40rem;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-secondary duration-200 text-white font-bold px-10 py-3 rounded-full;
+  }
+}
