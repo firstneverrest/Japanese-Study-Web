@@ -28,3 +28,44 @@ cd your-project
 npm install
 npm run dev
 ```
+
+## vite-tsconfig-paths
+
+Vite need additional package called `vite-tsconfig-paths` in case you would like to use tsconfig paths. [More information](https://github.com/aleclarson/vite-tsconfig-paths).
+
+## Storybook
+
+A development environment and playground for UI components. It create components independently and showcase those components interactively in an isolated development environment (outside React).
+
+- view the different components that have already been developed
+- view the different props that those components accept
+- visually showcase the components to the stakeholders for feedback
+
+### Installation
+
+```
+npx sb init
+```
+
+```
+# run
+npm run storybook
+
+or
+
+yarn storybook
+```
+
+### Folder Structure
+
+```
+├── .storybook
+│   ├── main.js // config storybook itself
+│   └── preview.js // config story that you write
+├── src
+│   └── stories // boilerplate
+```
+
+### Story Hierarchy
+
+Use `/` to display components in the same folder
