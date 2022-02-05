@@ -1,17 +1,13 @@
 import React from 'react';
+import '../styles/global.css';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import SolidButton from '../components/SolidButton';
 
 export default {
   title: 'SolidButton',
   component: SolidButton,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof SolidButton>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof SolidButton> = (args) => (
   <SolidButton {...args} />
 );
@@ -27,3 +23,5 @@ Secondary.args = {
   color: 'primary',
   label: 'Back',
 };
+
+Primary.storyName = 'Pink Button';

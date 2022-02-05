@@ -69,3 +69,53 @@ yarn storybook
 ### Story Hierarchy
 
 Use `/` to display components in the same folder
+
+### Rename Your Story & Arguments
+
+```ts
+// use Template to enable args
+const Template: ComponentStory<typeof SolidButton> = (args) => (
+  <SolidButton {...args} />
+);
+
+export const Primary = Template.bind({});
+Primary.args = {
+  color: 'primary',
+  label: 'Get Started',
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  color: 'primary',
+  label: 'Back',
+};
+
+// rename your story
+Primary.storyName = 'Pink Button';
+```
+
+### Decorator
+
+A decorator is a way to wrap stories with extra markup or context mocking like centering components.
+
+#### Wrap individual component
+
+```ts
+export default {
+  title: 'SolidButton',
+  component: SolidButton,
+  decorators: [(story) => <Center>{story()}</Center>],
+} as ComponentMeta<typeof SolidButton>;
+```
+
+#### Global Decorator
+
+```ts
+import { addDecorator } from '@storybook/react';
+import Center from './decorator/Center';
+
+...
+
+addDecorator((story) => <Center>{story()}</Center>);
+
+```

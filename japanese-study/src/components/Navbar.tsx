@@ -4,7 +4,6 @@ const Navbar: React.FC = () => {
   return (
     <div className="grid place-items-center py-8">
       <div className="flex justify-around nav-width">
-        {/* <h2 className="text-white font-medium text-xl">Japanese Study</h2> */}
         <div className="flex">
           <svg
             width="14"
